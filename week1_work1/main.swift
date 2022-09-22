@@ -38,6 +38,16 @@ let products: [Product] = [
     Product(name: "El Aynası", price: 12.45)
 ]
 
+// Takes a string and returns it uppercased and without whitespaces
+func normalized(_ string: String) -> String {
+    var normalizedString: String
+    
+    normalizedString = string.uppercased()
+    normalizedString = normalizedString.trimmingCharacters(in: .whitespaces)
+    
+    return normalizedString
+}
+
 
 print("Şirinlesene'ye hoş geldiniz. Lütfen öncelikle kayıt olun.")
 
@@ -73,25 +83,37 @@ for product in products {
 }
 
 print("Hangi ürünle ilgileniyorsun?")
-let chosenProduct = readLine()!
+let chosenProductName = readLine()!
 
-print("İlgili ürünün detayları şu şekilde:")
-print("İsim: \(chosenProduct)")
-print("Fiyat: \(product.price)")
-print("Satıcı: \(product.usersRating)")
-print("Puanı: \(product.usersRating)")
-print("Diğer şirinlerin yorumları:")
-for comment in product.comments {
-    print(comment)
+var chosenProduct: Product?
+
+let normalizedChosenProductName = normalized(chosenProductName)
+for product in products {
+    let normalizedProductName: String = normalized(product.name)
+    if normalizedProductName == normalizedChosenProductName {
+        chosenProduct = product
+    }
 }
 
+if let chosenProduct = chosenProduct {
+    print("İlgili ürünün detayları şu şekilde:")
+    print("İsim: \(chosenProduct.name)")
+    print("Fiyat: \(chosenProduct.price)")
+    print("Satıcı: \(chosenProduct.seller)")
+    print("Puanı: \(chosenProduct.usersRating)")
+    print("Diğer şirinlerin yorumları:")
+    for comment in chosenProduct.comments {
+        print(comment)
+    }
+} else {
+    print("Yanlış ürün adı girdiniz. Program sonlanacak.")
+}
 
+print("Bu ürünü favorilerinze eklemek ister misiniz? (y/n)")
+let favouritesPreference: String = readLine()!
 
-
-      
-
-
-
-
+if favouritesPreference == "y" {
+    user.favorites.append(chosenProduct)
+}
 
 
