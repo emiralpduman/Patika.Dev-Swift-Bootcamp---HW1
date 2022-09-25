@@ -25,14 +25,20 @@ struct Product {
 }
 
 class Cart {
+    private let promotionDiscount: Float = 5
     static var shared = Cart()
     
     private(set) var products: [Product] = []
+    
+    var thereIsPromotion: Bool = false
     
     var totalPrice: Float {
         var sum: Float = 0
         for product in products {
             sum += product.price
+        }
+        if thereIsPromotion {
+            sum -= promotionDiscount
         }
         return sum
     }
@@ -55,6 +61,11 @@ class Cart {
     }
 }
 
+enum PaymentMethod: CaseIterable {
+    case sirinCilegi, cilekesKart
+}
+
+
 let products: [Product] = [
     Product(name: "Gözlük", price: 100.25),
     Product(name: "Çekiç", price: 50.50),
@@ -68,13 +79,28 @@ let products: [Product] = [
     Product(name: "El Aynası", price: 12.45)
 ]
 
-let occupations: [String] = ["Şirin Baba", "Şirine", "Güçlü", "Gözlüklü", "Şakacı", "Somurtkan", "Hayalci", "Sakar", "Obur", "Aşçı", "Süslü"]
+let occupations: [String] = ["Şirin Baba", "Şirine", "Gözlüklü", "Şakacı", "Somurtkan", "Hayalci", "Sakar", "Obur", "Aşçı", "Süslü"]
 
-enum PaymentMethod: CaseIterable {
-    case sirinCilegi, cilekesKart
-}
 
 var user = Smurf(name: "Emiralp", gender: "Erkek", age: "32", occupation: "Kodçu")
+
+// func registrationPage() {
+    print("Şirinlesene'ye hoş geldiniz. Lütfen öncelikle kayıt olun.")
+
+    print("İsminiz:")
+    let name = readLine()!
+
+    print("Cinsiyetiniz:")
+    let gender  = readLine()!
+
+    print("Yaşınız:")
+    var age = readLine()!
+
+    print("Mesleğiniz:")
+    var occupation = readLine()!
+
+    user = Smurf(name: name, gender: gender, age: age, occupation: occupation)
+    mainScreen()
 
 
 func productDetails() {
@@ -256,12 +282,18 @@ func payment() {
             print("Teşekkürler!\n\n")
         }
         Cart.shared.empty()
+        Cart.shared.thereIsPromotion = false
         user.orderCount += 1
         mainScreen()
         
         
     case .p:
-        cart()
+        let oldSum: Float = Cart.shared.totalPrice
+        Cart.shared.thereIsPromotion = true
+        print("Promosyon kodunuz eklenmiştir!")
+        print("Eski tutar: \(oldSum)")
+        print("Yeni tutar: \(Cart.shared.totalPrice)")
+        payment()
     case .d:
         mainScreen()
     case .none:
@@ -324,8 +356,5 @@ func mainScreen() {
     }
 }
 
-
-
 mainScreen()
-
 
