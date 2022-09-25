@@ -143,12 +143,14 @@ func productDetails() {
         case f, s, p
     }
     
-    print("Hangi ürünle ilgili detay almak istersiniz?\n\n")
+    print("\nHangi ürünle ilgili detay almak istersiniz?")
     
     for product in products {
-        print("\(product.name)")
+        if product.occupations.contains(user.occupation) {
+            print(product.name)
+
+        }
     }
-    print()
     
     let usersProductName: String = readLine()!
     var usersProduct: Product = products[0]
@@ -269,10 +271,10 @@ func payment() {
     }
     
     
-    print("Ödeme sayfasındasınız;\n\n")
+    print("\nÖdeme sayfasındasınız;\n")
     print("Toplam sepet tutarı: \(Cart.shared.totalPrice) ŞÇ")
     
-    print("Ödeme seçenekleriniz;\n\n")
+    print("Ödeme seçenekleriniz;\n")
     
     for aCAse in PaymentMethod.allCases {
         switch aCAse {
@@ -311,10 +313,10 @@ func payment() {
         switch paymentChoice {
         case .sirinCilegi:
             print("Şirin Çileği ile kapıda ödeme yapılacak. Siparişiniz verildi. Toplam tutar: \(Cart.shared.totalPrice) ŞÇ")
-            print("Teşekkürler!\n\n")
+            print("Teşekkürler!\n")
         case .cilekesKart:
             print("Siparişiniz verildi. \(Cart.shared.totalPrice) değerindeki tutar Çilekeş Kart'ınzdan çekildi.")
-            print("Teşekkürler!\n\n")
+            print("Teşekkürler!\n")
         }
         Cart.shared.empty()
         Cart.shared.thereIsPromotion = false
@@ -337,20 +339,20 @@ func payment() {
 }
 
 func profile() {
-    print("Merhaba \(user.name)!\n\n")
+    print("\nMerhaba \(user.name)!\n")
     
     if user.favorites.isEmpty {
         print("Hiçbir favori ürünün bulunmamaktadır.")
     } else {
         print("Favori ürünlerin:")
         for product in user.favorites {
-            print("\(product.name)")
+            print(product.name)
         }
     }
         
     print("\nTeslimatta \(user.orderCount) adet siparişin bulunuyor.")
     
-    print("Ana menüye dönmek için enter'a basınız.")
+    print("\nAna menüye dönmek için enter'a basınız.")
     let _ = readLine()!
     mainScreen()
 }
@@ -360,7 +362,7 @@ func mainScreen() {
         case ü, s, p, ç
     }
 
-    print("\nÜrünlerimiz:\n")
+    print("\nÜrünlerimiz:")
     for product in products {
         if product.occupations.contains(user.occupation) {
             print(product.name)
@@ -371,7 +373,7 @@ func mainScreen() {
     var choice: UserChoice?
     
     while choice == nil {
-        print("Ne yapmak istersiniz?\n")
+        print("\nNe yapmak istersiniz?")
         print("Ürün detayları (ü), Sepetim (s), Profilim (p), Çıkış (ç)")
         let response = readLine()!
         for aCase in UserChoice.allCases {
