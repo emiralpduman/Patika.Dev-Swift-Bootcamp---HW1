@@ -19,6 +19,7 @@ struct Smurf {
 struct Product {
     let name: String
     let price: Float
+    let occupations: [String]
     let seller: String = "Satıcı"
     let usersRating: Int = 5
     let comments: [String] = ["İlk kullanıcı yorumu", "İkinci kullanıcı yorumu", "Üçüncü kullanıcı yorumu"]
@@ -67,24 +68,25 @@ enum PaymentMethod: CaseIterable {
 
 
 let products: [Product] = [
-    Product(name: "Gözlük", price: 100.25),
-    Product(name: "Çekiç", price: 50.50),
-    Product(name: "Topuklu Ayakkabı", price: 75.00),
-    Product(name: "Emzik", price: 5.75),
-    Product(name: "Beyaz Başlık", price: 25.25),
-    Product(name: "Kırmızı Başlık", price: 30.00),
-    Product(name: "Kalem", price: 4.00),
-    Product(name: "Beyaz Eşofman", price: 60.50),
-    Product(name: "Kırmızı Eşofman", price: 70.20),
-    Product(name: "El Aynası", price: 12.45)
+    Product(name: "Gözlük", price: 100.25, occupations: ["Gözlüklü Şirin"]),
+    Product(name: "Topuklu Ayakkabı", price: 75.00, occupations: ["Şirine"]),
+    Product(name: "Emzik", price: 5.75, occupations: ["Şirine"]),
+    Product(name: "Beyaz Başlık", price: 25.25, occupations: ["Şirine", "Gözlüklü Şirin"]),
+    Product(name: "Kırmızı Başlık", price: 30.00, occupations: ["Şirin Baba"]),
+    Product(name: "Beyaz Eşofman", price: 60.50, occupations: ["Şirine", "Gözlüklü Şirin"]),
+    Product(name: "Kırmızı Eşofman", price: 70.20, occupations: ["Şirin Baba"]),
+    Product(name: "El Aynası", price: 12.45, occupations: ["Şirine"])
 ]
 
-let occupations: [String] = ["Şirin Baba", "Şirine", "Gözlüklü", "Şakacı", "Somurtkan", "Hayalci", "Sakar", "Obur", "Aşçı", "Süslü"]
-
+enum Occupation: Int {
+    case sirinBaba = 0, sirine, gozluklu
+}
 
 var user = Smurf(name: "Emiralp", gender: "Erkek", age: "32", occupation: "Kodçu")
 
-// func registrationPage() {
+func registrationPage() {
+
+    
     print("Şirinlesene'ye hoş geldiniz. Lütfen öncelikle kayıt olun.")
 
     print("İsminiz:")
@@ -94,13 +96,46 @@ var user = Smurf(name: "Emiralp", gender: "Erkek", age: "32", occupation: "Kodç
     let gender  = readLine()!
 
     print("Yaşınız:")
-    var age = readLine()!
+    let age = readLine()!
 
-    print("Mesleğiniz:")
-    var occupation = readLine()!
+    print("Mesleğiniz:\nLütfen aşağıdakilerden seçiniz:")
+    print("Şirin Baba(0), Şirine(1), Gözlüklü Şirin(2) ?")
+
+    var usersOccupation: Occupation = .gozluklu
+    var isSelectionDone = false
+    let range = 0...2
+    
+    while isSelectionDone == false {
+        if let occupationNo = Int(readLine()!) {
+            if range.contains(occupationNo) {
+                usersOccupation = Occupation(rawValue: occupationNo) ?? .gozluklu
+                isSelectionDone = true
+            } else {
+                print("Yanlış giriş yaptınız. Lütfen tekrar deneyin.")
+                print("Şirin Baba(0), Şirine(1), Gözlüklü Şirin(2) ?")
+            }
+        }
+        else {
+            print("Yanlış giriş yaptınız. Lütfen tekrar deneyin.")
+        }
+    }
+ 
+    var occupation: String = ""
+    
+    switch usersOccupation {
+        
+    case .sirinBaba:
+        occupation = "Şirin Baba"
+    case .sirine:
+        occupation = "Şirine"
+    case .gozluklu:
+        occupation = "Gözlüklü Şirin"
+    }
+
 
     user = Smurf(name: name, gender: gender, age: age, occupation: occupation)
     mainScreen()
+}
 
 
 func productDetails() {
@@ -304,11 +339,15 @@ func payment() {
 func profile() {
     print("Merhaba \(user.name)!\n\n")
     
-    print("Favori ürünlerin:")
-    for product in user.favorites {
-        print("\(product.name)")
+    if user.favorites.isEmpty {
+        print("Hiçbir favori ürünün bulunmamaktadır.")
+    } else {
+        print("Favori ürünlerin:")
+        for product in user.favorites {
+            print("\(product.name)")
+        }
     }
-    
+        
     print("\nTeslimatta \(user.orderCount) adet siparişin bulunuyor.")
     
     print("Ana menüye dönmek için enter'a basınız.")
@@ -323,7 +362,10 @@ func mainScreen() {
 
     print("\nÜrünlerimiz:\n")
     for product in products {
-        print(product.name)
+        if product.occupations.contains(user.occupation) {
+            print(product.name)
+
+        }
     }
 
     var choice: UserChoice?
@@ -356,5 +398,5 @@ func mainScreen() {
     }
 }
 
-mainScreen()
+registrationPage()
 
