@@ -52,7 +52,7 @@
     <li>
       <a href="#getting-started">Kurulum</a>
     </li>
-    <li><a href="#contact">İletişim</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
   </ol>
 </details>
 
