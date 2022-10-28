@@ -18,7 +18,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -26,10 +25,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h3 align="center">project_title</h3>
+<h3 align="center">Sirinlesene</h3>
 
   <p align="center">
-    project_description
+    Patika.dev Pazarama iOS Swift Bootcamp'inde verilen ödev için geliştirdiğim commandline uygulaması
     <br />
     <a href="https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1"><strong>Explore the docs »</strong></a>
     <br />
