@@ -44,9 +44,9 @@
   <summary>İçindekiler</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Proje Hakkında</a>
+      <a href="#proje-hakkinda">Proje Hakkında</a>
       <ul>
-        <li><a href="#built-with">Kullandığım Diller</a></li>
+        <li><a href="#diller">Diller</a></li>
       </ul>
     </li>
     <li>
@@ -59,7 +59,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Proje Hakkında
+## Proje Hakkinda
 
 Ödev dosyasından alıntı: Şirinlesene uygulaması, şirinler köyünde kullanılmak üzere geliştirilmiş bir pazar yeri uygulamasıdır. Bu uygulama üstünde; gözlüklü şirinler için gözlük, usta şirinler için çekiç, şirineler için topuklu ayakkabı, bebek şirinler için emzik vb. pek çok ürün(hayal gücünüz ile sınırlı) satılmaktadır. 
 
@@ -67,7 +67,7 @@
 
 
 
-### Kullandığım Diller
+### Diller
 
 [![Swift][Swift]][Swift-url]
 
