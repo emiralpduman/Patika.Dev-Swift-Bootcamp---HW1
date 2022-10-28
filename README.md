@@ -83,20 +83,9 @@ Main.swift dosyasını Xcode ile açın. Command'da çalıştırın.
 <!-- CONTACT -->
 ## İletişim
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - emiralpduman@gmail.com
+Emiralp Duman - [@twitter_handle](https://twitter.com/twitter_handle) - emiralpduman@gmail.com
 
 Project Link: [https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1](https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
