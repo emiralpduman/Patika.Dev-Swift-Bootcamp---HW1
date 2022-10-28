@@ -61,9 +61,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Proje Hakkında
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `emiralpduman`, `Patika.Dev-Swift-Bootcamp---HW1`, `emiralpduman`, `emiralp-duman`, `gmail`, `emiralpduman`, `project_title`, `project_description`
+Ödev dosyasından alıntı: Şirinlesene uygulaması, şirinler köyünde kullanılmak üzere geliştirilmiş bir pazar yeri uygulamasıdır. Bu uygulama üstünde; gözlüklü şirinler için gözlük, usta şirinler için çekiç, şirineler için topuklu ayakkabı, bebek şirinler için emzik vb. pek çok ürün(hayal gücünüz ile sınırlı) satılmaktadır. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,7 +69,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Kullandığım Diller
 
-* [![Next][Next.js]][Next-url]
+* [![Swift][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
@@ -143,3 +141,5 @@ Project Link: [https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1](
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[Swift]: https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white
+[Swift-url]: https://www.apple.com/swift/
