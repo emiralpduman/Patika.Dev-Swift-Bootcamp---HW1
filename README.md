@@ -30,14 +30,10 @@
   <p align="center">
     Patika.dev Pazarama iOS Swift Bootcamp'inde verilen ödev için geliştirdiğim commandline uygulaması
     <br />
-    <a href="https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1/tree/main/week1_work1"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1">View Demo</a>
-    ·
-    <a href="https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1/issues">Request Feature</a>
+
   </p>
 </div>
 
