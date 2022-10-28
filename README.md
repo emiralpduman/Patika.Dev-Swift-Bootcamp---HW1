@@ -69,7 +69,7 @@
 
 ### Kullandığım Diller
 
-* [![Swift][Swift]][Swift-url]
+[![Swift][Swift]][Swift-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
