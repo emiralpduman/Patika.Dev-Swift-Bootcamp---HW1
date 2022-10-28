@@ -50,9 +50,9 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Kurulum</a>
+      <a href="#kurulum">Kurulum</a>
     </li>
-    <li><a href="#iletişim">İletişim</a></li>
+    <li><a href="#iletisim">Iletisim</a></li>
   </ol>
 </details>
 
@@ -81,7 +81,7 @@
 Main.swift dosyasını Xcode ile açın. Command'da çalıştırın.
 
 <!-- CONTACT -->
-## İletişim
+## Iletisim
 
 Emiralp Duman - [@twitter_handle](https://twitter.com/twitter_handle) - emiralpduman@gmail.com
 
