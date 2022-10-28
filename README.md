@@ -1,4 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<!-- Improved compatibility of yukarıya dön link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -63,7 +63,7 @@
 
 Ödev dosyasından alıntı: Şirinlesene uygulaması, şirinler köyünde kullanılmak üzere geliştirilmiş bir pazar yeri uygulamasıdır. Bu uygulama üstünde; gözlüklü şirinler için gözlük, usta şirinler için çekiç, şirineler için topuklu ayakkabı, bebek şirinler için emzik vb. pek çok ürün(hayal gücünüz ile sınırlı) satılmaktadır. 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">yukarıya dön</a>)</p>
 
 
 
@@ -71,7 +71,7 @@
 
 [![Swift][Swift]][Swift-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">yukarıya dön</a>)</p>
 
 
 
@@ -85,9 +85,9 @@ Main.swift dosyasını Xcode ile açın. Command'da çalıştırın.
 
 Emiralp Duman - [@twitter_handle](https://twitter.com/twitter_handle) - emiralpduman@gmail.com
 
-Project Link: [https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1](https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1)
+Proje bağlantısı: [https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1](https://github.com/emiralpduman/Patika.Dev-Swift-Bootcamp---HW1)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">yukarıya dön</a>)</p>
 
 
 
