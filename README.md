@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h3 align="center">Sirinlesene</h3>
+<h3 align="center">Şirinlesene</h3>
 
   <p align="center">
     Patika.dev Pazarama iOS Swift Bootcamp'inde verilen ödev için geliştirdiğim commandline uygulaması
@@ -52,7 +52,7 @@
     <li>
       <a href="#getting-started">Kurulum</a>
     </li>
-    <li><a href="#iletisim">İletişim</a></li>
+    <li><a href="#iletişim">İletişim</a></li>
   </ol>
 </details>
 
